@@ -1,15 +1,30 @@
 function ProductManagement() {
   //add products variable here
+  
+  let products = [];
+  let currentId = 1;
 
-  function getAllProducts() {}
 
-  function addProduct(product) {}
+  function getAllProducts() {
+    // products.forEach((element) => console.log(element));
+    return products;
+  }
 
-  function searchByName(name) {}
+  function addProduct(product) {
+      return products.push(product)
+  }
 
-  function searchByPriceRange(minPrice, maxPrice) {}
+  function searchByName(name) {
+      return products.filter((product) => product.name == name )
+  }
 
-  function removeAll() {}
+  function searchByPriceRange(minPrice, maxPrice) {
+     return products.filter((product) => product.price >= minPrice && product.price <= maxPrice)
+  }
+
+  function removeAll() {
+    return products = []
+  }
 
   return {
     removeAll,
